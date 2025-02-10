@@ -9,7 +9,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-4">
-              <StakdLogo className="w-8 h-8" />
+              <img 
+                src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports-1.png"
+                alt="Stacked Sports Logo"
+                className="w-8 h-8"
+                loading="lazy"
+                decoding="async"
+                style={{ imageRendering: 'crisp-edges' }}
+              />
               <h3 className="text-xl font-bold ml-2">Stacked Sports LLC</h3>
             </div>
             <p className="text-gray-400">

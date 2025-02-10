@@ -20,7 +20,7 @@ const Home = () => {
                   Innovative Communication Solutions for Maximum Impact
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
-                  Transform how your organization connects with stakeholders through our cutting-edge engagement platforms.
+                  Transform how your organization connects with key stakeholders through our cutting-edge engagement platforms.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button 
@@ -39,9 +39,11 @@ const Home = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="https://insiderinbox.co/wp-content/uploads/2025/02/Group-34.png"
+                  src="https://insiderinbox.co/wp-content/uploads/2025/02/Group-34@2x-min.png"
                   alt="Insider Inbox Platform"
                   className="rounded-lg shadow-2xl"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
