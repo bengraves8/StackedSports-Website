@@ -20,13 +20,15 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports-1.png" 
-              alt="Stacked Sports Logo" 
-              className="w-10 h-10"
-            />
-            <span className="ml-2 text-xl font-bold text-gray-900">Stacked Sports</span>
+          <Link to="/" className="flex items-center shrink-0">
+            <div className="flex items-center">
+              <img 
+                src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports.svg" 
+                alt="Stacked Sports Logo" 
+                className="w-8 h-8 md:w-10 md:h-10"
+              />
+              <span className="ml-2 text-lg md:text-xl font-bold text-gray-900 whitespace-nowrap">Stacked Sports</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -35,23 +37,31 @@ const Header = () => {
             
             {/* Products Dropdown */}
             <div 
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setIsProductsOpen(true)}
               onMouseLeave={() => setIsProductsOpen(false)}
             >
               <button
-                className="flex items-center text-gray-600 hover:text-gray-900 font-medium"
+                className="flex items-center text-gray-600 hover:text-gray-900 font-medium py-2"
               >
                 Products
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`} />
               </button>
+
+              {/* Invisible hover bridge */}
+              <div className="absolute -bottom-6 left-0 w-full h-6 bg-transparent" />
 
               {/* Dropdown Menu */}
               <div 
-                className={`absolute top-full left-0 mt-2 w-[400px] bg-white rounded-lg shadow-lg border border-gray-100 py-4 transition-opacity duration-150 ${
-                  isProductsOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+                className={`absolute top-[calc(100%+1.5rem)] left-1/2 -translate-x-1/2 w-[400px] bg-white rounded-lg shadow-lg border border-gray-100 py-4 transition-all duration-200 ${
+                  isProductsOpen 
+                    ? 'opacity-100 visible translate-y-0' 
+                    : 'opacity-0 invisible translate-y-2'
                 }`}
               >
+                {/* Arrow */}
+                <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-white border-t border-l border-gray-100" />
+                
                 <div className="px-4 pb-2 mb-2 border-b border-gray-100">
                   <h3 className="text-sm font-semibold text-gray-500">Our Products</h3>
                 </div>
@@ -59,7 +69,7 @@ const Header = () => {
                 {/* Insider Inbox */}
                 <Link 
                   to="/products/insider-inbox"
-                  className="flex items-start px-4 py-3 hover:bg-gray-50"
+                  className="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex-shrink-0">
                     <InsiderInboxLogo className="w-8 h-8" />
@@ -75,7 +85,7 @@ const Header = () => {
                 {/* Stakd */}
                 <Link 
                   to="/products/stakd"
-                  className="flex items-start px-4 py-3 hover:bg-gray-50"
+                  className="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex-shrink-0">
                     <StakdLogo className="w-8 h-8" />
@@ -132,7 +142,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden shrink-0 ml-4"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
