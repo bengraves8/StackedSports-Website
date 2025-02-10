@@ -8,10 +8,12 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
 import RequestDemo from './pages/RequestDemo';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
@@ -30,4 +32,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

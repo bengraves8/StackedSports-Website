@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { BarChart2, Users, Target, Zap, MessageSquare, Database, LineChart, Lock, Brain, Calendar, Mail, Globe } from 'lucide-react';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -18,8 +19,17 @@ const ProductDetail = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {product.features.map((feature, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mr-4">
+                    <div className="bg-green-50 p-2 rounded-lg">
+                      {feature.icon}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                    <p className="text-gray-600">{feature.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -30,7 +40,7 @@ const ProductDetail = () => {
               href={product.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700"
+              className="inline-block bg-secondary-400 text-black px-8 py-3 rounded-md hover:bg-secondary-500 transition-colors font-medium"
             >
               Learn More About {product.name}
             </a>
@@ -43,23 +53,27 @@ const ProductDetail = () => {
 
 const stakdDetails = {
   name: 'Stakd',
-  description: 'A comprehensive donor management platform designed specifically for athletic departments.',
+  description: 'A comprehensive communication platform designed for small businesses, non-profits, and sports ticketing departments.',
   features: [
     {
-      title: 'Donor Management',
-      description: 'Efficiently manage donor relationships and track engagement.'
+      title: 'Bulk Messaging',
+      description: 'Send SMS, MMS, and email messages to your entire audience or specific segments.',
+      icon: <MessageSquare className="h-6 w-6 text-green-600" />
     },
     {
       title: 'Analytics Dashboard',
-      description: 'Powerful insights into donor behavior and giving patterns.'
+      description: 'Track engagement metrics and campaign performance in real-time.',
+      icon: <BarChart2 className="h-6 w-6 text-green-600" />
     },
     {
-      title: 'Campaign Management',
-      description: 'Create and track fundraising campaigns with ease.'
+      title: 'Web Chat Integration',
+      description: 'Engage with website visitors through live chat functionality.',
+      icon: <Globe className="h-6 w-6 text-green-600" />
     },
     {
-      title: 'Integration Capabilities',
-      description: 'Seamlessly connect with your existing tools and systems.'
+      title: 'Email Campaigns',
+      description: 'Create and manage sophisticated email marketing campaigns.',
+      icon: <Mail className="h-6 w-6 text-green-600" />
     }
   ],
   link: 'https://stakd.co'
@@ -67,23 +81,27 @@ const stakdDetails = {
 
 const insiderInboxDetails = {
   name: 'Insider Inbox',
-  description: 'Revolutionary communication platform connecting athletic departments with their members.',
+  description: 'Revolutionary communication platform connecting athletic departments with their top supporters through exclusive content and personalized engagement.',
   features: [
     {
-      title: 'Direct Messaging',
-      description: 'Secure and efficient communication between staff and members.'
+      title: 'AI-Powered Engagement',
+      description: 'Leverage artificial intelligence to optimize communication timing and content.',
+      icon: <Brain className="h-6 w-6 text-green-600" />
     },
     {
-      title: 'Engagement Tools',
-      description: 'Built-in features to drive and measure member engagement.'
+      title: 'Supporter Analytics',
+      description: 'Track and analyze supporter engagement and behavior patterns.',
+      icon: <LineChart className="h-6 w-6 text-green-600" />
     },
     {
-      title: 'Analytics',
-      description: 'Track communication effectiveness and member engagement.'
+      title: 'Content Calendar',
+      description: 'Plan and schedule content delivery based on your athletic calendar.',
+      icon: <Calendar className="h-6 w-6 text-green-600" />
     },
     {
-      title: 'Security',
-      description: 'Enterprise-grade security for all communications.'
+      title: 'Secure Communications',
+      description: 'Enterprise-grade security for all supporter communications.',
+      icon: <Lock className="h-6 w-6 text-green-600" />
     }
   ],
   link: 'https://insiderinbox.co'
