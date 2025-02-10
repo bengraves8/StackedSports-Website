@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports.svg" 
+              src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports-1.png" 
               alt="Stacked Sports Logo" 
               className="w-10 h-10"
             />
