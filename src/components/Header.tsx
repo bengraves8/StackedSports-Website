@@ -23,7 +23,7 @@ const Header = () => {
           <Link to="/" className="flex items-center shrink-0">
             <div className="flex items-center">
               <img 
-                src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports.svg" 
+                src="https://insiderinbox.co/wp-content/uploads/2025/02/S-favicon-Stacked-Sports-1.png" 
                 alt="Stacked Sports Logo" 
                 className="w-8 h-8 md:w-10 md:h-10"
               />
@@ -66,6 +66,7 @@ const Header = () => {
                   <h3 className="text-sm font-semibold text-gray-500">Our Products</h3>
                 </div>
                 
+                
                 {/* Insider Inbox */}
                 <Link 
                   to="/products/insider-inbox"
@@ -98,9 +99,11 @@ const Header = () => {
                   </div>
                 </Link>
 
-                {/* RecruitSuite - Legacy */}
-                <div className="px-4 py-3 opacity-75">
-                  <div className="flex items-start">
+                {/* RecruitSuite */}
+                <Link 
+                  to="/recruitsuite"
+                  className="flex items-start px-4 py-3 hover:bg-gray-50 transition-colors"
+                >
                     <div className="flex-shrink-0">
                       <RecruitSuiteLogo className="w-8 h-8" />
                     </div>
@@ -115,8 +118,7 @@ const Header = () => {
                         Now part of Teamworks.com
                       </p>
                     </div>
-                  </div>
-                </div>
+                </Link>
 
                 {/* View All Products */}
                 <div className="px-4 pt-2 mt-2 border-t border-gray-100">
@@ -195,6 +197,18 @@ const Header = () => {
                     </Link>
                     <p className="text-xs text-gray-500 mt-1">
                       Communication platform for businesses and non-profits
+                    </p>
+                  </div>
+                  <div>
+                    <Link 
+                      to="/recruitsuite"
+                      className="block text-sm text-gray-600 hover:text-gray-900 py-1 font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      RecruitSuite
+                    </Link>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Legacy recruiting platform, now part of Teamworks.com
                     </p>
                   </div>
                 </div>

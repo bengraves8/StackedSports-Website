@@ -8,6 +8,7 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import ProductDetail from './pages/ProductDetail';
 import RequestDemo from './pages/RequestDemo';
+import RecruitSuite from './pages/RecruitSuite';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/request-demo" element={<RequestDemo />} />
+            <Route path="/recruitsuite" element={<RecruitSuite />} />
           </Routes>
         </main>
         <Footer />
