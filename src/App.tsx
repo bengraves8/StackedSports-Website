@@ -22,10 +22,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/request-demo" element={<RequestDemo />} />
+            <Route path="/products/insider-inbox" element={<ProductDetail />} />
+            <Route path="/products/stakd" element={<ProductDetail />} />
             <Route path="/recruitsuite" element={<RecruitSuite />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/request-demo" element={<RequestDemo />} />
           </Routes>
         </main>
         <Footer />
