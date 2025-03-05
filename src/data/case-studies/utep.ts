@@ -9,7 +9,7 @@ export const utep = {
     { value: "$10M", label: "Major gifts secured" },
     { value: "38K+", label: "Messages sent" },
     { value: "50.14%", label: "Top donors click rate" },
-    { value: "6", label: "Months to implementation" }
+    { value: "34%", label: "Ticket renewal click rate" }
   ],
   topVideos: [
     {
