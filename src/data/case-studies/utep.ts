@@ -24,23 +24,25 @@ export const utep = {
     },
     {
       title: "Pack the house",
-      description: "Coach Golding wants every seat filled and every fan loud! Let’s pack the stadium and bring the energy for this huge matchup",
+      description: "Coach Golding wants every seat filled and every fan loud! Let's pack the stadium and bring the energy for this huge matchup",
       videoUrl: "https://insiderinbox.co/wp-content/uploads/2025/02/677ec43e4d7fe7b4dccdfc71.mp4",
-      category: "Basketball",
+      category: "Basketball, Hype Video, Tickets",
       stats: {
         openRate: "25%",
         viewRate: "31%"
-      }
+      },
+      visible: true
     },
     {
       title: "Tarmac Moment",
       description: "Special behind-the-scenes footage of the team arriving for a crucial away game",
       videoUrl: "https://inbx.vip/4hO2qNM",
-      category: "Football",
+      category: "Football, Pre-game",
       stats: {
         openRate: "22%",
         viewRate: "34%"
-      }
+      },
+      visible: true
     }
   ],
   goals: [
@@ -152,7 +154,13 @@ export const utep = {
       title: "Sold Out Crowd",
       description: "After three targeted messaging campaigns through Stakd and Insider Inbox—along with other initiatives—UTEP achieved a sold-out crowd for the New Mexico State game!",
       link: true,
-      milestone: true
+      milestone: false
+    },
+    {
+      date: "February 2025",
+      title: "Season Ticket Campaign Success",
+      description: "Launched 2025 football schedule release campaign to season ticket holders, achieving a 74% delivery rate and 34% renewal link click rate through targeted MMS messaging.",
+      milestone: false
     },
     {
       date: "February 2025",
