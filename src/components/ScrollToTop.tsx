@@ -7,11 +7,11 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // Send pageview to GA4 with full URL information
-    ReactGA.send({
-      hitType: "pageview",
-      page: pathname + window.location.search,
-      title: document.title
+    
+    // Send pageview to GA4
+    ReactGA.send("pageview", {
+      page_path: pathname + window.location.search,
+      page_title: document.title
     });
   }, [pathname]);
 

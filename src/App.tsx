@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import ReactGA from 'react-ga4';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -14,6 +15,12 @@ import CaseStudies from './pages/CaseStudies';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import ScrollToTop from './components/ScrollToTop';
 import Inspiration from './pages/Inspiration';
+
+// Initialize GA4 with configuration options
+ReactGA.initialize('G-VJKVVTV8H5', {
+  testMode: process.env.NODE_ENV !== 'production',
+  debug: process.env.NODE_ENV !== 'production'
+});
 
 function App() {
   return (
